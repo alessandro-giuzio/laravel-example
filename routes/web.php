@@ -9,6 +9,12 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/music', function () {
+    return view('music', [
+        'songs' => \App\Models\Music::all()
+    ]);
+});
+
 Route::get('/jobs', function () {
     return view('jobs', [
         'jobs' => Job::all()

@@ -2,19 +2,19 @@
     <x-slot:heading>
         Artist Page
         <h1>Welcome to the Artist Page</h1>
-
     </x-slot:heading>
     <div>
         <p>Here you can find all the latest music news and updates.</p>
         <ul>
-            @foreach ($songs as $song)
-                <a href="/music/{{ $song['id'] }}" class="block px-4 py-6 border border-gray-200 rounded-lg">
-                    <div class="font-bold text-blue-500 text-sm">{{ $song['title'] }}</div>
-                    <strong>by {{ $song['artist'] }} - Album {{ $song['album'] }}</strong>
-                </a>
-            @endforeach
+            @if(isset($song))
+                <li>
+                    <strong>Title:</strong> {{ $song->title }}<br>
+                    <strong>Artist:</strong> {{ $song->artist }}<br>
+                    <strong>Album:</strong> {{ $song->album }}
+                </li>
+            @else
+                <li>No song found.</li>
+            @endif
         </ul>
     </div>
-
-
 </x-layout>

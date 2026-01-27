@@ -14,6 +14,12 @@ Route::get('/musics', function () {
     ]);
 });
 
+Route::get('/music/{id}', function ($id) {
+    $song = \App\Models\Music::find($id);
+
+    return view('music', ['song' => $song]);
+});
+
 Route::get('/jobs', function () {
     $jobs = Job::with('employer')->paginate(6);
 

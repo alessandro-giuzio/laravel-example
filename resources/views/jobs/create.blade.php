@@ -20,9 +20,11 @@
                                     required
                                     class="block min-w-0 grow bg-transparent py-1.5 pr-3 pl-1 text-base text-gray-900 placeholder:text-gray-400 focus:outline-none sm:text-sm/6" />
                             </div>
+                            @error('title')
+                                <p class="text-red-600 text-sm mt-2">{{ $message }}</p>
+                            @enderror
                         </div>
                     </div>
-
                     <div class="sm:col-span-4">
                         <label for="salary" class="block text-sm/6 font-medium text-gray-900">Salary</label>
                         <div class="mt-2">
@@ -43,6 +45,16 @@
                         </div>
                     </div>
                 </div>
+
+                {{-- <div class="mt-10">
+                    @if ($errors->any())
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li class="text-red-600 text-sm mt-2">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
+                </div> --}}
             </div>
         </div>
 

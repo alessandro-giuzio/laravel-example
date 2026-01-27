@@ -12,6 +12,9 @@
                 <div>
                     <strong>{{ $job['title'] }}:</strong> Pays {{ $job['salary'] }} per year.
                 </div>
+                <div>
+                    Description {{ $job['description'] }}
+                </div>
             </a>
         @endforeach
         <div>

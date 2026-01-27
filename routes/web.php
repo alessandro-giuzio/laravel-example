@@ -32,9 +32,9 @@ Route::get('/jobs/{id}', function ($id) {
     return view('jobs.show', ['job' => $job]);
 });
 
+// Store Job Route
 Route::post('/jobs',function (){
-
-    Job::create([
+        Job::create([
         'title' => request('title'),
         'salary' => request('salary'),
         'employer_id' => 1,

@@ -12,6 +12,6 @@ class MusicSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        \App\Models\Music::factory()->count(20)->create();
     }
 }

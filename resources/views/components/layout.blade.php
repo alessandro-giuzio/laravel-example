@@ -30,7 +30,7 @@
                                 <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
                                 <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
                                 <x-nav-link href="/contact" :active="request()->is('contact')" type="button">Contact</x-nav-link>
-                                <x-nav-link href="/music" :active="request()->is('music')">Music</x-nav-link>
+                                <x-nav-link href="/musics" :active="request()->is('musics')">Musics</x-nav-link>
                             </div>
                         </div>
                     </div>
@@ -133,8 +133,6 @@
             </div>
         </main>
     </div>
-
-    {{ $slot }}
 </body>
 
 </html>

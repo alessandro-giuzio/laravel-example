@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot:heading>
-        Artist Page
-        <h1>Welcome to the Artist Page</h1>
+        Music Page
+        <h1>Welcome to the Music Page</h1>
 
     </x-slot:heading>
     <div>

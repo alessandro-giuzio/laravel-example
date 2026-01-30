@@ -49,7 +49,8 @@
 
         <div class="mt-6 flex items-center justify-between gap-x-6">
             <div class="flex items-center">
-                <button type="button" form="delete-form" class="text-red-500 text-sm font-bold">Delete</button>
+                <button form="delete-form"
+                    class="text-red-500 text-sm font-bold border border-red-500 rounded-md px-3 py-2 cursor-pointer">Delete</button>
             </div>
             <div class="flex items-center gap-x-6">
                 <a href="/jobs/{{ $job->id }}" class="text-sm/6 font-semibold text-gray-900">Cancel</a>
